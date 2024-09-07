@@ -1,6 +1,6 @@
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', e => {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
@@ -9,8 +9,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Contact form submission
-document.getElementById('contact-form').addEventListener('submit', function(e) {
+document.getElementById('contact-form').addEventListener('submit', e => {
     e.preventDefault();
     alert("Your message has been sent!");
-    // Here, you can add AJAX call to send the form data to a server
+    // TODO: add AJAX call to send the form data to a server
 });
